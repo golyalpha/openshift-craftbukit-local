@@ -1,0 +1,11 @@
+#!/bin/bash
+SERVER_PROPERTIES=server.properties
+CRAFTBUKKIT_SERVER_JAR=craftbukkit-dev.jar
+
+set -x 
+
+
+if [ ! -e "$OPENSHIFT_DATA_DIR/$CRAFTBUKKIT_SERVER_JAR" ]; then
+	mv craftbukkit.jar $OPENSHIFT_DATA_DIR
+fi
+
